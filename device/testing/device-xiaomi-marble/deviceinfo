@@ -14,6 +14,7 @@ deviceinfo_chassis="handset"
 deviceinfo_external_storage="false"
 deviceinfo_screen_width="1080"
 deviceinfo_screen_height="2400"
+deviceinfo_drm="true"
 
 # Kernel options
 deviceinfo_dtb="qcom/sm8475-xiaomi-marble"

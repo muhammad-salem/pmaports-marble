@@ -3,7 +3,7 @@ maintainer="Tatsuki Tanaka <tatsuki@tanakatatsuki.dev>"
 pkgname=device-xiaomi-marble
 pkgdesc="Xiaomi POCO F5 / Redmi Note 12 Turbo"
 pkgver=1
-pkgrel=41
+pkgrel=42
 url="https://postmarketos.org"
 license="MIT"
 arch="aarch64"
@@ -129,12 +129,13 @@ nonfree_firmware() {
 # starts after it. pkgrel 40: hexagonrpcd needs ~10 s before the sensors are served.
 # pkgrel 41: start the Plasma Mobile session only once iio-sensor-proxy reports the sensors
 # (KWin/powerdevil check once at startup; auto-rotate and auto-brightness never saw them).
+# pkgrel 42: deviceinfo_drm="true" so that pmbootstrap init offers graphical user interfaces.
 sha512sums="
 85c0c82603ec6dde952a53b5fe667a57121f23a1ceb76cf525c667ae53e25e72eea5c1f9e8839083ed8253ffc20fd45df5c4a326c25c6119ff9bd13e5666de75  50-marble-display-on.sh
 1d0d837ee8060a356a3888dc9beb8f4b7eb824b90a971c9fd93b94e8925353dc303c671c3daba3f03985e94acd29dd69035f86060730dd8bf26374f937340c74  81-libssc-xiaomi-marble.rules
 618735f4e49cf71ea324e3e2e694248564277375d3e08caa1455b2357e7666076c607b6fc9b8fd1b54c70301d78f0f908c7c48009d316786d6da77565e5926c5  HiFi.conf
 4204d8e5b7c36f39a909f4dda8bb546f38b7d79cc1e612337d5ea0e115b565600400d397005cd6796839bb0498f8c0d201af11db6a52189032295f86ecd0a68a  marble.conf
-a891ab1244224e59c41091246d9d4aac6dea4af414348d2a94ace7a9d8cd74498ccbcb3111d6bb61be39899563ad1f95188096f48fe4758e69029657310bb30f  deviceinfo
+9548d2aa5f392af903dcf95c0a5e38e4786076e64443b695a03d8276521caaf9712a425d0abc962137761c30f84152e4a73bb411c583bb7d73ab77d166a0250d  deviceinfo
 0e1293a65d2d9f899d1ebb989efcc0b076a3148c96f08951e6a72f47bc6c61ec5c3759748aae91203e0f0d3f5cd3be53372883665000c0b15cfa27e11801ce9e  environment-marble.conf
 105877df8e5cc7cf8dd35c24e062bf7b0b3303152a02a7dd4643b432bf15992ae121999f979f197f854984bb596e0f3b4c516b2ef1cf503e3dbe3c90a9a08cc2  hexagonrpcd-sdsp-marble.conf
 af66960939e6a9be4f9e39cc4e81ff6889adc0754f68ba038085dd888be46aec106f9556255794886ef469668e5bb027f63e84513746addf46a47f759024257d  iio-sensor-proxy-marble.conf
